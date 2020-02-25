@@ -1,0 +1,32 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            app:titleTextColor="@android:color/white"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/app_name"
+                android:textSize="20sp"
+                android:fontFamily="@font/poetsenone"
+                android:textColor="@color/blacklight"
+                android:gravity="center"
+                android:layout_marginRight="15dp">
+            </TextView>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </RelativeLayout>
+</merge>

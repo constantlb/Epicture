@@ -1,0 +1,221 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.AdapterFavorites {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.AdapterHome {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.AdapterHot {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.AdapterPosts {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.AdapterRandom {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.AdapterSearch {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.AdapterTop {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.AddActivity {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.BuildConfig {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.Frag1_posts {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.Frag2_favorites {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.Frag_Hot {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.Frag_Random {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.Frag_Top {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.HomeActivity {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.LoginActivity {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.MyObject {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.ProfileActivity {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.SearchActivity {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    namespace filters.param.main {
+      class com.purge.epicture.filters.param.main.PageViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    namespace filters.param.main {
+      class com.purge.epicture.filters.param.main.PlaceholderFragment {
+      }
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    namespace filters.param.main {
+      class com.purge.epicture.filters.param.main.SectionsPagerAdapterFilter {
+      }
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    class com.purge.epicture.imgur_info {
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    namespace ui.main {
+      class com.purge.epicture.ui.main.PageViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    namespace ui.main {
+      class com.purge.epicture.ui.main.PlaceholderFragment {
+      }
+    }
+  }
+  
+
+  namespace com.purge.epicture {
+    namespace ui.main {
+      class com.purge.epicture.ui.main.SectionsPagerAdapter {
+      }
+    }
+  }
+  
+
+  com.purge.epicture.AdapterFavorites -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.purge.epicture.AdapterFavorites o-- com.purge.epicture.AdapterFavorites.OnItemClickListener : mListener
+  com.purge.epicture.AdapterHome -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.purge.epicture.AdapterHome o-- com.purge.epicture.AdapterHome.OnItemClickListener : mListener
+  com.purge.epicture.AdapterHot -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.purge.epicture.AdapterHot o-- com.purge.epicture.AdapterHot.OnItemClickListener : mListener
+  com.purge.epicture.AdapterPosts -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.purge.epicture.AdapterPosts o-- com.purge.epicture.AdapterPosts.OnItemClickListener : mListener
+  com.purge.epicture.AdapterRandom -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.purge.epicture.AdapterRandom o-- com.purge.epicture.AdapterRandom.OnItemClickListener : mListener
+  com.purge.epicture.AdapterSearch -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.purge.epicture.AdapterSearch o-- com.purge.epicture.AdapterSearch.OnItemClickListener : mListener
+  com.purge.epicture.AdapterTop -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.purge.epicture.AdapterTop o-- com.purge.epicture.AdapterTop.OnItemClickListener : mListener
+  com.purge.epicture.AddActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.purge.epicture.Frag1_posts -up-|> androidx.fragment.app.Fragment
+  com.purge.epicture.Frag1_posts o-- com.purge.epicture.AdapterPosts : adapter
+  com.purge.epicture.Frag2_favorites -up-|> androidx.fragment.app.Fragment
+  com.purge.epicture.Frag2_favorites o-- com.purge.epicture.AdapterFavorites : adapter
+  com.purge.epicture.Frag_Hot -up-|> androidx.fragment.app.Fragment
+  com.purge.epicture.Frag_Hot o-- com.purge.epicture.AdapterHot : adapter
+  com.purge.epicture.Frag_Random -up-|> androidx.fragment.app.Fragment
+  com.purge.epicture.Frag_Random o-- com.purge.epicture.AdapterRandom : adapter
+  com.purge.epicture.Frag_Top -up-|> androidx.fragment.app.Fragment
+  com.purge.epicture.Frag_Top o-- com.purge.epicture.AdapterTop : adapter
+  com.purge.epicture.HomeActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.purge.epicture.HomeActivity o-- com.purge.epicture.AdapterHome : adapter
+  com.purge.epicture.LoginActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.purge.epicture.ProfileActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.purge.epicture.SearchActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.purge.epicture.SearchActivity o-- com.purge.epicture.AdapterSearch : adapter
+  com.purge.epicture.filters.param.main.PageViewModel -up-|> androidx.lifecycle.ViewModel
+  com.purge.epicture.filters.param.main.PlaceholderFragment -up-|> androidx.fragment.app.Fragment
+  com.purge.epicture.filters.param.main.PlaceholderFragment o-- com.purge.epicture.filters.param.main.PageViewModel : pageViewModel
+  com.purge.epicture.filters.param.main.SectionsPagerAdapterFilter -up-|> androidx.fragment.app.FragmentPagerAdapter
+  com.purge.epicture.ui.main.PageViewModel -up-|> androidx.lifecycle.ViewModel
+  com.purge.epicture.ui.main.PlaceholderFragment -up-|> androidx.fragment.app.Fragment
+  com.purge.epicture.ui.main.PlaceholderFragment o-- com.purge.epicture.ui.main.PageViewModel : pageViewModel
+  com.purge.epicture.ui.main.SectionsPagerAdapter -up-|> androidx.fragment.app.FragmentPagerAdapter
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

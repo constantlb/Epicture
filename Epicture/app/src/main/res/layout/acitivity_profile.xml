@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Top bar -->
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/layout_top_bar" />
+
+        </RelativeLayout>
+
+        <!-- Middle section -->
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayout1">
+
+            <ImageView
+                android:id="@+id/imgBackgroundProfile"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:background="@color/grey"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="250dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:cardCornerRadius="250dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgViewProfile"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/background_img_login"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/open_sans"
+                android:id="@+id/pseudo"
+                android:text="PSEUDO"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="110dp">
+
+                <TextView
+                    android:id="@+id/reputation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:lines="1"
+                    android:padding="2dp"
+                    android:text="Reputation"
+                    android:textAlignment="textEnd"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/white"
+                    android:padding="2dp"
+                    android:layout_toRightOf="@id/reputation"
+                    android:id="@+id/textview2"
+                    android:text="•"/>
+
+                <TextView
+                    android:id="@+id/rp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/textview2"
+                    android:padding="2dp"
+                    android:textColor="@color/white"
+                    android:text="RP"/>
+
+                <TextView
+                    android:id="@+id/reputationPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/rp"
+                    android:textColor="@color/white"
+                    android:padding="2dp"
+                    android:text="points"/>
+
+            </RelativeLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:background="@color/white"/>
+
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="248dp"
+            android:layout_marginBottom="49dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <!-- Bottom bar -->
+        <include layout="@layout/layout_bottom_navigation_view" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
